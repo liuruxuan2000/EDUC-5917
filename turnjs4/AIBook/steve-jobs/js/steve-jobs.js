@@ -32,7 +32,7 @@ function loadPage(page) {
 
 	$.ajax({url: 'pages/page' + page + '.html'}).
 		done(function(pageHtml) {
-			$('.sj-book .p' + page).html(pageHtml.replace('samples/steve-jobs/', ''));
+			$('.sj-book .p' + page).html(pageHtml.replace('AIBook/steve-jobs/', ''));
 		});
 
 }
@@ -136,7 +136,7 @@ function zoomThis(pic) {
 				left: position.left-picPosition.left
 			};
 
-			$('.samples .bar').css({visibility: 'hidden'});
+			$('.AIBook .bar').css({visibility: 'hidden'});
 			$('#slider-bar').hide();
 			
 		
@@ -173,7 +173,7 @@ function zoomOut() {
 
 	$('.zoom-pic').remove();
 	$('#book-zoom').transform('scale(1, 1)');
-	$('.samples .bar').css({visibility: 'visible'});
+	$('.AIBook .bar').css({visibility: 'visible'});
 	$('#slider-bar').show();
 
 	if (transitionEnd)
